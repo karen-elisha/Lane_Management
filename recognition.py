@@ -139,7 +139,7 @@ def main():
     # Specify the paths
     dataset_path = r"C:\Users\H P\Downloads\dataset"  # Change to your dataset folder path
     output_path = r"C:\Users\H P\OneDrive\Desktop\output"  # Change this to your desired output folder path
-    image_name = r"C:\Users\H P\Downloads\dataset\train\1234.jpg"  # Change to your image file name
+    image_name = r"C:\Users\H P\Downloads\dataset\1234.jpg"  # Change to your image file name
 
     # Preprocess images before proceeding with the main functionalities
     preprocess_images(dataset_path, output_path)
