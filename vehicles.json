@@ -1,0 +1,113 @@
+{
+    "project": {
+      "name": "Hand Detection and OCR",
+      "description": "A project that detects hands using MediaPipe, recognizes text from images, and detects flashes.",
+      "author": "Karen & Ritvik",
+      "date": "2024-10-19"
+    },
+    "functions": {
+      "detect_flash": {
+        "description": "Detects flash on the left and right sides of the frame.",
+        "parameters": {
+          "frame": {
+            "type": "numpy.ndarray",
+            "description": "The input image frame from the webcam."
+          }
+        },
+        "returns": {
+          "left_flash": {
+            "type": "bool",
+            "description": "Indicates if a flash was detected on the left side."
+          },
+          "right_flash": {
+            "type": "bool",
+            "description": "Indicates if a flash was detected on the right side."
+          }
+        }
+      },
+      "enhance_image_for_ocr": {
+        "description": "Enhances the image to improve OCR recognition.",
+        "parameters": {
+          "image": {
+            "type": "numpy.ndarray",
+            "description": "The input image to enhance."
+          }
+        },
+        "returns": {
+          "thresh": {
+            "type": "numpy.ndarray",
+            "description": "The enhanced binary image suitable for OCR."
+          }
+        }
+      },
+      "recognize_text": {
+        "description": "Recognizes text in the image using OCR.",
+        "parameters": {
+          "image": {
+            "type": "numpy.ndarray",
+            "description": "The input image to recognize text from."
+          }
+        },
+        "returns": {
+          "text": {
+            "type": "string",
+            "description": "The recognized text from the image."
+          }
+        }
+      },
+      "take_photo": {
+        "description": "Captures a photo from the frame and performs OCR on it.",
+        "parameters": {
+          "frame": {
+            "type": "numpy.ndarray",
+            "description": "The input image frame from the webcam."
+          }
+        },
+        "returns": {
+          "recognized_text": {
+            "type": "string",
+            "description": "The recognized text from the captured photo."
+          }
+        }
+      },
+      "load_and_process_image": {
+        "description": "Loads an image from the dataset and performs hand and flash detection, along with OCR.",
+        "parameters": {
+          "image_name": {
+            "type": "string",
+            "description": "The name of the image file to load."
+          },
+          "dataset_path": {
+            "type": "string",
+            "description": "The path to the dataset folder containing images."
+          }
+        },
+        "returns": {
+          "image": {
+            "type": "numpy.ndarray",
+            "description": "The processed image with hand landmarks drawn on it."
+          }
+        }
+      },
+      "preprocess_images": {
+        "description": "Preprocesses all images in the dataset by resizing, normalizing, and blurring.",
+        "parameters": {
+          "dataset_path": {
+            "type": "string",
+            "description": "The path to the dataset folder containing images."
+          },
+          "output_path": {
+            "type": "string",
+            "description": "The path to save preprocessed images."
+          }
+        },
+        "returns": "None"
+      },
+      "main": {
+        "description": "Main function that orchestrates the image preprocessing and real-time hand detection.",
+        "parameters": "None",
+        "returns": "None"
+      }
+    }
+  }
+
