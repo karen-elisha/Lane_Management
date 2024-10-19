@@ -1,0 +1,54 @@
+# Ignore files and directories
+
+# System files
+.DS_Store
+ehthumbs.db
+picasa.ini
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+.suo
+.ntvs*
+.njsproj
+.csproj
+
+# Build and compilation files
+node_modules/
+build/
+dist/
+target/
+bin/
+obj/
+
+# Package files
+package-lock.json
+yarn.lock
+composer.lock
+
+# Log files
+.log
+.tmp
+.cache
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+
+# Miscellaneous files
+.gz
+.zip
+.rar
+.7z
+.tar
+.exe
+.dll
+.so
+.o
+
+# Custom ignore files (add your own)
+# custom_file.txt
+# custom_directory/
